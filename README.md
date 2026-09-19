@@ -77,7 +77,6 @@ Mental_Health_in_Tech_EDA/
 │       └── data_dictionary.csv          # Comprehensive data dictionary
 │
 ├── notebooks/
-│   ├── Sample_EDA_Submission_Template.ipynb   # Provided submission template
 │   └── Mental_Health_in_Tech_EDA_Final.ipynb  # Executed final notebook (169 cells)
 │
 ├── src/
