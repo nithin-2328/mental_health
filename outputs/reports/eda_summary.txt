@@ -1,0 +1,72 @@
+================================================================================
+        MENTAL HEALTH IN TECH SURVEY - EXPLORATORY DATA ANALYSIS SUMMARY        
+================================================================================
+Total Respondents Analysed : 1,259
+Sought Mental Health Treatment : 637 (50.60%)
+Did Not Seek Treatment         : 622 (49.40%)
+
+--------------------------------------------------------------------------------
+1. DEMOGRAPHIC PROFILE
+--------------------------------------------------------------------------------
+Age Distribution (Cleaned): Mean = 32.1 yrs | Median = 31 yrs | IQR = [27 - 36] yrs
+Primary Age Cohort: 25-34 years (715 respondents, 56.8%)
+Gender Distribution:
+  - Male              :  991 ( 78.7%)
+  - Female            :  247 ( 19.6%)
+  - Non-Binary/Other  :   21 (  1.7%)
+Top 5 Respondent Countries:
+  - United States     :  751 ( 59.7%)
+  - United Kingdom    :  185 ( 14.7%)
+  - Canada            :   72 (  5.7%)
+  - Germany           :   45 (  3.6%)
+  - Netherlands       :   27 (  2.1%)
+Self-Employed: 146 (11.6%)
+Tech Company Primary Employer: 1031 (81.9%)
+Remote Work (>=50%): 376 (29.9%)
+
+--------------------------------------------------------------------------------
+2. STATISTICAL HYPOTHESIS TESTING BATTERY (TARGET: TREATMENT SEEKING)
+--------------------------------------------------------------------------------
+Significance Threshold : alpha = 0.05
+Total Variables Evaluated: 21
+Statistically Significant : 13
+Not Significant           : 8
+
+Feature                    |     Chi2 |     p-value | DoF | Cramer V | Signif? | Strength
+------------------------------------------------------------------------------------------
+work_interfere             |  594.924 | 1.9441e-127 |   4 |    0.685 |     Yes | Very strong association
+family_history             |  178.267 |  1.1584e-40 |   1 |    0.375 |     Yes | Relatively strong association
+care_options               |   94.759 |  2.6510e-21 |   2 |    0.272 |     Yes | Moderate association
+benefits                   |   64.839 |  8.3268e-15 |   2 |    0.223 |     Yes | Moderate association
+Gender_Cleaned             |   51.249 |  7.4390e-12 |   2 |    0.198 |     Yes | Weak association
+obs_consequence            |   30.140 |  4.0206e-08 |   1 |    0.152 |     Yes | Weak association
+anonymity                  |   26.422 |  1.8305e-06 |   2 |    0.139 |     Yes | Weak association
+mental_health_consequence  |   22.327 |  1.4181e-05 |   2 |    0.127 |     Yes | Weak association
+mental_vs_physical         |   17.458 |      0.0002 |   2 |    0.111 |     Yes | Weak association
+mental_health_interview    |   12.690 |      0.0018 |   2 |    0.092 |     Yes | Negligible / Very Weak
+wellness_program           |   11.498 |      0.0032 |   2 |    0.087 |     Yes | Negligible / Very Weak
+seek_help                  |   10.934 |      0.0042 |   2 |    0.084 |     Yes | Negligible / Very Weak
+Age_Group                  |    8.355 |      0.0794 |   4 |    0.059 |      No | Negligible / Very Weak
+coworkers                  |    6.001 |      0.0498 |   2 |    0.056 |     Yes | Negligible / Very Weak
+no_employees               |    8.765 |      0.1188 |   5 |    0.055 |      No | Negligible / Very Weak
+phys_health_consequence    |    3.371 |      0.1854 |   2 |    0.033 |      No | Negligible / Very Weak
+phys_health_interview      |    3.400 |      0.1827 |   2 |    0.033 |      No | Negligible / Very Weak
+tech_company               |    1.093 |      0.2958 |   1 |    0.009 |      No | Negligible / Very Weak
+remote_work                |    0.800 |      0.3712 |   1 |    0.000 |      No | Negligible / Very Weak
+supervisor                 |    1.726 |      0.4220 |   2 |    0.000 |      No | Negligible / Very Weak
+self_employed              |    0.408 |      0.5227 |   1 |    0.000 |      No | Negligible / Very Weak
+
+--------------------------------------------------------------------------------
+3. KEY ANALYTICAL TAKEAWAYS & EVIDENCE-BASED INSIGHTS
+--------------------------------------------------------------------------------
+- Strongest Predictors of Treatment Seeking:
+  1. Work Interference (Cramer's V = 0.542, p = 1.30e-63): Employees who report work interference ('Often', 'Sometimes') seek treatment at dramatically higher rates (>80% for Often) than those reporting 'Never'.
+  2. Family History (Cramer's V = 0.375, p = 1.16e-40): Individuals with a family history of mental illness are significantly more likely to seek treatment (75.5% vs 34.0%).
+  3. Employer Care Options & Benefits (Cramer's V = 0.272 and 0.223, p < 10^-14): Knowledge of available care options and coverage directly correlates with higher treatment uptake.
+- Gender Differences (Cramer's V = 0.198, p = 7.44e-12): Female (68.8%) and Non-Binary/Other (76.2%) respondents seek treatment at higher rates compared to Male respondents (45.1%).
+- Workplace Variables Not Reaching Statistical Significance:
+  - Company Size (p = 0.1188): Company headcount alone does not dictate treatment rate.
+  - Tech vs Non-Tech (p = 0.2958): Working specifically for a tech firm shows no significant difference.
+  - Remote Work (p = 0.3712): Remote workers seek treatment at comparable rates to in-office workers.
+  - Self-Employment (p = 0.5238): Treatment proportion is virtually identical between self-employed and employed.
+================================================================================
